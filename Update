@@ -19,5 +19,4 @@
                         $full_pay = $pay+$url
                         IEX $full_pay
                 }
-Start-Sleep -Seconds 310
 }
